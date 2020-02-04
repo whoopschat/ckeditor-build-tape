@@ -1,4 +1,4 @@
-CKEditor 5 document editor build
+CKEditor 5 build tape
 ========================================
 
 ## Quick start
