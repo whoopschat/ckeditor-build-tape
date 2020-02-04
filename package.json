@@ -91,9 +91,9 @@
     "build/**",
     "packages/**"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "dependencies": {
+    "@ckeditor/ckeditor5-code-block": "^16.0.0",
+    "@ckeditor/ckeditor5-horizontal-line": "^16.0.0",
+    "@ckeditor/ckeditor5-page-break": "^16.0.0"
   }
 }

@@ -6,10 +6,16 @@
 // The editor creator to use.
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
 
+
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -36,14 +42,16 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
-export default class DecoupledEditor extends DecoupledEditorBase {}
+export default class TapeEditor extends DecoupledEditorBase { }
 
 // Plugins to include in the build.
-DecoupledEditor.builtinPlugins = [
+TapeEditor.builtinPlugins = [
 	Essentials,
 	Alignment,
 	FontSize,
 	FontFamily,
+	FontColor,
+	FontBackgroundColor,
 	Highlight,
 	UploadAdapter,
 	Autoformat,
@@ -68,18 +76,21 @@ DecoupledEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	HorizontalLine,
+	PageBreak,
 ];
 
 // Editor configuration.
-DecoupledEditor.defaultConfig = {
+TapeEditor.defaultConfig = {
 	toolbar: {
-		items: [
+		items: [,
 			'heading',
 			'|',
 			'fontsize',
 			'fontfamily',
-			'|',
+			'fontColor',
+			'fontBackgroundColor',
 			'bold',
 			'italic',
 			'underline',
@@ -87,6 +98,8 @@ DecoupledEditor.defaultConfig = {
 			'highlight',
 			'|',
 			'alignment',
+			'pageBreak',
+			'horizontalLine',
 			'|',
 			'numberedList',
 			'bulletedList',
@@ -94,14 +107,14 @@ DecoupledEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'|',
+			'undo',
+			'redo',
+			'|',
 			'link',
 			'blockquote',
 			'imageUpload',
 			'insertTable',
 			'mediaEmbed',
-			'|',
-			'undo',
-			'redo'
 		]
 	},
 	image: {
