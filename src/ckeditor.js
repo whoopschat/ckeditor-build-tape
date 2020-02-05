@@ -9,6 +9,7 @@ import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decoup
 
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
@@ -41,11 +42,18 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
+import FontSizeConverter from 'ckeditor5-fontsize-converter/src/fontsizeconverter';
 
 export default class TapeEditor extends DecoupledEditorBase { }
 
 // Plugins to include in the build.
 TapeEditor.builtinPlugins = [
+	HorizontalLine,
+	PageBreak,
+	TodoList,
 	Essentials,
 	Alignment,
 	FontSize,
@@ -77,12 +85,21 @@ TapeEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	HorizontalLine,
-	PageBreak,
+	BlockToolbar,
+	RemoveFormat,
+	Emoji,
+	FontSizeConverter,
 ];
 
 // Editor configuration.
 TapeEditor.defaultConfig = {
+	blockToolbar: [
+		'removeFormat', 'bulletedList', 'numberedList', 'todoList',
+		'|',
+		'pageBreak', 'horizontalLine',
+		'|',
+		'emoji', 'link', 'blockquote', 'imageUpload', 'insertTable', 'mediaEmbed',
+	],
 	toolbar: {
 		items: [,
 			'heading',
@@ -98,23 +115,11 @@ TapeEditor.defaultConfig = {
 			'highlight',
 			'|',
 			'alignment',
-			'pageBreak',
-			'horizontalLine',
-			'|',
-			'numberedList',
-			'bulletedList',
-			'|',
 			'indent',
 			'outdent',
 			'|',
 			'undo',
 			'redo',
-			'|',
-			'link',
-			'blockquote',
-			'imageUpload',
-			'insertTable',
-			'mediaEmbed',
 		]
 	},
 	image: {
