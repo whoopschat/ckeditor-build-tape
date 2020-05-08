@@ -32,6 +32,7 @@ import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
@@ -42,6 +43,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
@@ -76,6 +78,7 @@ TapeEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
 	Indent,
 	IndentBlock,
 	Link,
@@ -89,6 +92,7 @@ TapeEditor.builtinPlugins = [
 	RemoveFormat,
 	Emoji,
 	FontSizeConverter,
+	CodeBlock,
 ];
 
 // Editor configuration.
@@ -98,7 +102,7 @@ TapeEditor.defaultConfig = {
 		'|',
 		'pageBreak', 'horizontalLine',
 		'|',
-		'emoji', 'link', 'blockquote', 'imageUpload', 'insertTable', 'mediaEmbed',
+		'emoji', 'link', 'blockquote', 'imageUpload', 'insertTable', 'mediaEmbed', 'codeBlock'
 	],
 	toolbar: {
 		items: [,

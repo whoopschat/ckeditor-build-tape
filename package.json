@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-tape",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The document editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -30,6 +30,7 @@
     "@ckeditor/ckeditor5-autoformat": "^16.0.0",
     "@ckeditor/ckeditor5-basic-styles": "^16.0.0",
     "@ckeditor/ckeditor5-block-quote": "^16.0.0",
+    "@ckeditor/ckeditor5-code-block": "19.0.0",
     "@ckeditor/ckeditor5-ckfinder": "^16.0.0",
     "@ckeditor/ckeditor5-core": "^16.0.0",
     "@ckeditor/ckeditor5-dev-utils": "^12.0.0",

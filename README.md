@@ -18,7 +18,7 @@ And use it in your website:
 </div>
 <script src="./node_modules/ckeditor5-build-tape/build/ckeditor.js"></script>
 <script>
-	DecoupledEditor
+	TapeEditor
 		.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			// The toolbar needs to be explicitly appended.
